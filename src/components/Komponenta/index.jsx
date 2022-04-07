@@ -5,7 +5,7 @@ const Komponenta = () => {
 
 	const [name, setName] = useState('Erika');
 	const [souhlas, setSouhlas] = useState(false);
-	const [mesto, setMesto] = useState('Brno');
+	const [mesto, setMesto] = useState('BRN');
 
 	// const handleChange = (event) => {
 	// 	// console.log('zmena v policku');
@@ -27,9 +27,9 @@ const Komponenta = () => {
 
 
 			<select value={mesto} onChange={ (event) => { setMesto(event.target.value)} }>
-				<option>Praha</option>
-				<option>Brno</option>
-				<option>Ostrava</option>
+				<option value="PHA">Praha</option>
+				<option value="BRN">Brno</option>
+				<option value="OVA">Ostrava</option>
 			</select>
 
 			<p>Vybrané město je <strong>{mesto}</strong></p>
@@ -44,6 +44,9 @@ const Komponenta = () => {
 				/>
 				Souhlasim s podminkami
 			</label>
+
+			<hr />
+
 			<button disabled={!souhlas}>Objednat</button>
 		</div>
 	)
