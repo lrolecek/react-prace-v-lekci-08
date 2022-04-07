@@ -5,6 +5,7 @@ const Komponenta = () => {
 
 	const [name, setName] = useState('Erika');
 	const [souhlas, setSouhlas] = useState(false);
+	const [mesto, setMesto] = useState('Brno');
 
 	// const handleChange = (event) => {
 	// 	// console.log('zmena v policku');
@@ -21,6 +22,17 @@ const Komponenta = () => {
 
 			{ name.length < 5 && <p>Jmeno musi mit nejmene 5 pismen</p> }
 
+
+			<hr />
+
+
+			<select value={mesto} onChange={ (event) => { setMesto(event.target.value)} }>
+				<option>Praha</option>
+				<option>Brno</option>
+				<option>Ostrava</option>
+			</select>
+
+			<p>Vybrané město je <strong>{mesto}</strong></p>
 
 			<hr />
 
